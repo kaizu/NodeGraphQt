@@ -3015,6 +3015,6 @@ class SubGraph(NodeGraph):
             PortTypeEnum.IN.value: self.get_input_port_nodes,
             PortTypeEnum.OUT.value: self.get_output_port_nodes
         }
-        for n in func_type.get(port.type_(), []):
+        for n in func_type.get(port.type_(), lambda: [])():
             if port == n.parent_port:
                 return n
