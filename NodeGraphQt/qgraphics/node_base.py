@@ -99,7 +99,8 @@ class NodeItem(AbstractNodeItem):
         if self.selected:
             painter.setBrush(QtGui.QColor(*NodeEnum.SELECTED_COLOR.value))
         else:
-            painter.setBrush(QtGui.QColor(0, 0, 0, 80))
+            # painter.setBrush(QtGui.QColor(0, 0, 0, 80))
+            painter.setBrush(QtGui.QColor(0, 0, 0, 5))
         painter.drawRoundedRect(text_rect, 3.0, 3.0)
 
         # node border
